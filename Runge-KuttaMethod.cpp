@@ -71,9 +71,10 @@ double RKMethod::SolveEquation()
 
 int main()
 {
-	AbstractOdeSolver* solver = new RKMethod;
-	solver->SetTimeInterval(0, 1);
-	solver->SetStepSize(0.001);
-	solver->SetInitialValue(2);
-	solver->SolveEquation();
+	AbstractOdeSolver* p_solver = new RKMethod;
+	p_solver->SetTimeInterval(0, 1);
+	p_solver->SetStepSize(0.001);
+	p_solver->SetInitialValue(2);
+	p_solver->SolveEquation();
+	delete p_solver;
 }
